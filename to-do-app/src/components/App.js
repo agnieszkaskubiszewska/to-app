@@ -22,15 +22,37 @@ class App extends Component {
         important:false,
         active: true, 
         finisheDate: null
+      },
+      {
+        id:2,
+        text:"Skończyć malować sciane",
+        date:"2024-12-22",
+        important:false,
+        active: true, 
+        finisheDate: null
       }
     ]
   }
 
   deleteTask = (id) => {
-    console.log("Deleted wpizdu" + id)
+    const tasks = [...this.state.tasks]
+    const index = tasks.findIndex(task => task.id === id)
+    tasks.splice(index, 1)
+
+    this.setState({
+      tasks
+    })
   }
   changeTaskStatus = (id) => {
-    console.log("Zrobione fest" + id)
+    const tasks = [...this.state.tasks]
+    tasks.forEach(task => {
+      if(task.id === id){
+        task.active = false;
+      }
+    })
+    this.setState({
+      tasks
+    })
   }
 
   render() {
