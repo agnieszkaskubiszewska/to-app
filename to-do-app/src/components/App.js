@@ -26,11 +26,11 @@ class App extends Component {
     ]
   }
 
-  deleteTask = () => {
-    console.log("Deleted wpizdu")
+  deleteTask = (id) => {
+    console.log("Deleted wpizdu" + id)
   }
-  changeTaskStatus = () => {
-    console.log("Zrobione fest")
+  changeTaskStatus = (id) => {
+    console.log("Zrobione fest" + id)
   }
 
   render() {
