@@ -20,12 +20,34 @@ class App extends Component {
         text:"Skończyć malować obraz",
         date:"2024-12-23",
         important:false,
-        active: true, 
+        active: false, 
         finisheDate: null
       },
       {
         id:2,
         text:"Skończyć malować sciane",
+        date:"2024-12-22",
+        important:false,
+        active: true, 
+        finisheDate: null
+      },      {
+        id:3,
+        text:"Skończyć kurs jogi",
+        date:"2024-12-22",
+        important:false,
+        active: true, 
+        finisheDate: null
+      }, 
+      {
+        id:4,
+        text:"Wyrzyc smieci",
+        date:"2024-12-22",
+        important:false,
+        active: true, 
+        finisheDate: null
+      },       {
+        id:5,
+        text:"Kup psa",
         date:"2024-12-22",
         important:false,
         active: true, 
@@ -47,7 +69,8 @@ class App extends Component {
     const tasks = [...this.state.tasks]
     tasks.forEach(task => {
       if(task.id === id){
-        task.active = false;
+        task.active = false
+        task.finisheDate =  new Date().getTime()
       }
     })
     this.setState({
