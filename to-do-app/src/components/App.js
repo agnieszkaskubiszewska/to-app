@@ -11,7 +11,7 @@ class App extends Component {
         id:0,
         text:"Skończyć kurs",
         date:"2024-12-22",
-        important:true,
+        important:false,
         active: true, 
         finisheDate: null
       },
@@ -20,7 +20,7 @@ class App extends Component {
         text:"Skończyć malować obraz",
         date:"2024-12-23",
         important:false,
-        active: false, 
+        active: true, 
         finisheDate: null
       },
       {
